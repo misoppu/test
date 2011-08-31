@@ -12,7 +12,7 @@ SingularTouch.UI.createMosaic = function (_args)
 	{
 		_args = {};
 	}
-	
+	//テストしました
 	/*
 	 * Base Component
 	 */
