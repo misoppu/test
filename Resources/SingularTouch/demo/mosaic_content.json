@@ -1,0 +1,23 @@
+[
+	{
+		"id": 1,
+		"image": "images/photos/1.jpg",
+		"title": "Sample Photo 1",
+		"subtitle": "saturday, 09 of july of 2011",
+		"description": "This is an example of description that you could write for your photo item."
+	},
+	{
+		"id": 2,
+		"image": "images/photos/2.jpg",
+		"title": "Sample Photo 2",
+		"subtitle": "saturday, 09 of july of 2011",
+		"description": "This is an example of description that you could write for your photo item."
+	},
+	{
+		"id": 3,
+		"image": "images/photos/3.jpg",
+		"title": "Sample Photo 3",
+		"subtitle": "saturday, 09 of july of 2011",
+		"description": "This is an example of description that you could write for your photo item."
+	}
+]

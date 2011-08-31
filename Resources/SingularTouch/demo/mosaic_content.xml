@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root type="array">
+  <item type="object">
+    <id type="number">1</id>
+    <image type="string">images/photos/1.jpg</image>
+    <title type="string">Sample Photo 1</title>
+    <subtitle type="string">saturday, 09 of july of 2011</subtitle>
+    <description type="string">This is an example of description that you could write for your photo item.</description>
+  </item>
+  <item type="object">
+    <id type="number">2</id>
+    <image type="string">images/photos/2.jpg</image>
+    <title type="string">Sample Photo 2</title>
+    <subtitle type="string">saturday, 09 of july of 2011</subtitle>
+    <description type="string">This is an example of description that you could write for your photo item.</description>
+  </item>
+  <item type="object">
+    <id type="number">3</id>
+    <image type="string">images/photos/3.jpg</image>
+    <title type="string">Sample Photo 3</title>
+    <subtitle type="string">saturday, 09 of july of 2011</subtitle>
+    <description type="string">This is an example of description that you could write for your photo item.</description>
+  </item>
+</root>
