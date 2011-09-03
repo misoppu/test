@@ -36,22 +36,11 @@ var img = Titanium.UI.createLabel({
    backgroundColor:'#aaa',
    width:"400",
    height:"100",
-   text:"「リーリー」と「シンシン」を選んで、ペアにしたら１パンダ獲得だよ！",
+   text:"「男の子パンダ」と「女の子パンダ」を選んで、ペアにしたら１パンダ獲得だよ！",
    textAlign:"center"
    ,left:"300"
    ,top:"300"
 });
-
-setTimeout(function(){
-	// 新たに作られた myView をWindowに追加する
-	Titanium.UI.currentWindow.add(img);
-}, 100);
-setTimeout(function(){
-	// 新たに作られた myView をWindowに追加する
-	//img.animate({center: "0", opacity: 0, duration: 500}, function (){
-        Titanium.UI.currentWindow.remove(img);
-	//});
-}, 8000);
 
 win.title = "パンダ合わせ";
 win.barColor = '#333';
@@ -383,6 +372,11 @@ var initSecond = function() {
 		myMosaic.fadeIn(ev.index, ev.duration);
 		// Reverse the effect with the same velocity
 	});
+Titanium.UI.currentWindow.add(img);
+img.animate({center: {x:500,y:400}, opacity: 0, duration: 10000}, function (){
+		Titanium.UI.currentWindow.remove(img);
+});
+
 }
 
 var initFirst = function() {
@@ -396,7 +390,7 @@ var initFirst = function() {
 				image : 'images/photos/shinshin/' + Math.round(Math.random() * 12) + '.jpg',
 				title : 'どっちかな？',
 				subtitle : i + 1,
-				description : 'シンシン'
+				description : '男の子パンダ'
 			};
 		} else {
 			var data = {
@@ -404,7 +398,7 @@ var initFirst = function() {
 				image : 'images/photos/lielie/' + Math.round(Math.random() * 12) + '.jpg',
 				title : 'どっちかな？',
 				subtitle : i + 1,
-				description : 'リーリー'
+				description : '女の子パンダ'
 			};
 		}
 

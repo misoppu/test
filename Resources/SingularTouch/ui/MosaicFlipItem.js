@@ -169,15 +169,12 @@ SingularTouch.UI.createMosaicFlipItem = function (_args)
 					Titanium.App.Properties.setString("time_flag","1");
 					alert(win.title + "クリア！");
 					win.title = "パンダ合わせ";
-					win.close();
-					
 					_cardCount =0;
 					_item1 = null;
 					_index1 = 0;
 					tokuten = 0;
 					clickFlag = false;
-
-					return;
+					win.close();
 				}
 				//alert("１パンダ獲得！")
 				var img = Titanium.UI.createLabel({
@@ -209,11 +206,30 @@ SingularTouch.UI.createMosaicFlipItem = function (_args)
 				//Ti.App.fireEvent('removeitem', {index:ev.index});
 				//Ti.App.fireEvent('removeitem', {index:index1});
 			} else {
+				var img = Titanium.UI.createLabel({
+				   borderRadius:40,
+				   backgroundColor:'#aaa',
+				   width:"200",
+				   height:"100",
+				   text:"はずれ〜",
+				   textAlign:"center"
+				   ,left:"400"
+				   ,top:"300"
+				});
 				setTimeout(function(){
+					Titanium.UI.currentWindow.add(img);
+/*
+					img.animate({center: {x:500,y:400}, opacity: 0, duration: 5000}, function (){
+							Titanium.UI.currentWindow.remove(img);
+					});
+*/
 					_item1.fireEvent("flipFront");
 					item.fireEvent("flipFront");
 					clickFlag = false;
 				}, 500);
+				setTimeout(function(){
+					Titanium.UI.currentWindow.remove(img);
+				}, 2000);
 				//tokuten--;
 			}
 
